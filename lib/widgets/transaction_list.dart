@@ -11,9 +11,9 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 570,
-      child: SingleChildScrollView(
-        child: Column(
+        height: 570,
+        child: SingleChildScrollView(
+            child: Column(
           children: transactions.map((tx) {
             return Card(
                 child: Row(
@@ -44,10 +44,7 @@ class TransactionList extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       tx.title,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.headline5,
                     ),
                     Text(
                       DateFormat('yyyy-MM-dd').format(tx.date),
@@ -60,8 +57,6 @@ class TransactionList extends StatelessWidget {
               ],
             ));
           }).toList(),
-        )
-      )
-    );
+        )));
   }
 }
