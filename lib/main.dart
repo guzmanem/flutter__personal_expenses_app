@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Flutter App',
+          'Personal Expenses App',
           style: Theme.of(context).textTheme.headline6,
         ),
         actions: [
